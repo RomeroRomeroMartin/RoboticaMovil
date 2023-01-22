@@ -1,0 +1,24 @@
+Antes de ejecutar las simulaciones, si quieres obtener las gráficas con los mismos resultados que se muestran en la memoria, primero debes ejecutar el programa python que las crea:
+	>>> python plot.py
+
+
+Para realizar la ejecución de la comparación, se automatiza el proceso empleando un archivo .sh que deberemos ejecutar, ten en cuenta que los datos se sobreescribirán y ya no serán los iniciales:
+
+bash exe.sh arg1 arg2 arg3
+
+donde 
+	· arg1 indica el mapa a usar, donde 1 indica el mapa generado aleatoriamente con la semilla( 0 y 3 indican los mapas predeterminados)
+	· arg2 acepta 1 o 0 según se quiera realizar un make clean y un rm -r de la carpeta datos( recomenado para ejecutar varias veces el experimento)
+	· arg3 acepta 1 o 0 segun se quiera mostrar cada una de las 200*3 simulaciones para cala algoritmo.
+
+
+A su vez, aunque no es algo que se necesite conocer para ejecutar el experimento, los ejecutables OARobot_CVM,OARobot_VFH y OARobot_PFM admiten como argumentos:
+	· ruta a donde crear archivos de datos se usará datos/name.dat
+	· mapa 0 1 -cualquiera-
+	· numero aleatorio que inicialice la semilla
+	· mostrar  o no simulacion acepta 1 o 0 segun se quiera mostrar
+
+	
+Ejemplo de la ejecución que usamos nosotros:
+
+	>>> bash exe.sh 1 1 0
